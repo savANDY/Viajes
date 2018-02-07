@@ -59,49 +59,265 @@
 	</div>
 
 
-	<div class="row-col box">
-        <div class="col-sm-8">
-    		<div class="box-header">
-	          <h3>¿Qué comer?</h3>
-	          <small>Your last activity is posted 4 hours ago</small>
-	        </div>
-	        <div class="box-body">
 
 
 
+						  <div class="row">
+						    <div class="col-sm-12 col-md-12">
 
-						<!-- Nav tabs -->
-						<ul class="nav nav-tabs">
-						  <li class="nav-item">
-						    <a class="nav-link active" data-toggle="tab" href="#lunes">Lunes</a>
-						  </li>
-						  <li class="nav-item">
-						    <a class="nav-link" data-toggle="tab" href="#martes">Martes</a>
-						  </li>
-						  <li class="nav-item">
-						    <a class="nav-link" data-toggle="tab" href="#miercoles">Miercoles</a>
-						  </li>
-						</ul>
 
-						<!-- Tab panes -->
-						<div class="tab-content">
-						  <div class="tab-pane active container" id="lunes">
-								Comida, cena
-							</div>
-						  <div class="tab-pane container" id="martes">
-								asdasdasd
-							</div>
-						  <div class="tab-pane container" id="miercoles">
-								.gfgf
-							</div>
+<h4 class="m-a-0 m-b-sm text-md">¿Qué comer?</h4>
+
+
+						<div class="m-b" id="accordion">
+
+			        <div class="panel box no-border m-b-xs">
+
+			          <div class="box-header p-y-sm">
+			            <span class="pull-right label text-sm">Arroz y Filete</span>
+			            <a data-toggle="collapse" data-parent="#accordion" data-target="#c_1">
+			              Lunes
+			            </a>
+			          </div>
+			          <div id="c_1" class="collapse in">
+			            <div class="box-body">
+
+
+										<div class="row m-b">
+											<div class="col-sm-8">
+												<div class="box">
+													<div class="box-header {{app.setting.theme.primary}}">
+														<h3>Arroz a la cubana</h3>
+														<small>Comida (10min)</small>
+														<div class="box-tool">
+															<ul class="nav">
+																<li class="nav-item inline">
+																	<a class="nav-link">
+																		<i class="material-icons md-18">&#xe863;</i>
+																	</a>
+																</li>
+																<li class="nav-item inline dropdown">
+																	<a class="nav-link" data-toggle="dropdown">
+																		<i class="material-icons md-18">&#xe5d4;</i>
+																	</a>
+																	<div class="dropdown-menu dropdown-menu-scale pull-right">
+																		<a class="dropdown-item" href>Action</a>
+																		<a class="dropdown-item" href>Another action</a>
+																		<a class="dropdown-item" href>Something else here</a>
+																		<div class="dropdown-divider"></div>
+																		<a class="dropdown-item">Separated link</a>
+																	</div>
+																</li>
+																<li class="nav-item inline">
+																	<a class="nav-link" ng-click="verComidaLunes1()">
+																		<i class="material-icons md-18">arrow_drop_down</i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="box-body" ng-show="verComidaLunes1==='true'">
+
+														<!-- Ingredientes de la comida -->
+														<h6 class="text-center">Ingredientes</h6>
+														<div class="list-group m-b">
+															<a href class="list-group-item b-l-success">
+																<span class="pull-right label success">200g</span>
+																Arroz
+															</a>
+															<a href class="list-group-item b-l-success">
+																<span class="pull-right label success">10ml</span>
+																Aceite
+															</a>
+															<a href class="list-group-item b-l-danger">
+																<span class="pull-right label danger">2 ud.</span>
+																Huevo
+															</a>
+															<a href class="list-group-item b-l-success">
+																<span class="pull-right label success">100ml</span>
+																Salsa de tomate
+															</a>
+															<a href class="list-group-item b-l-danger">
+																<span class="pull-right label danger">1 ud.</span>
+																Ajo
+															</a>
+														</div>
+
+														<!-- Preparación de la comida -->
+														<div class="list-group list-group-gap m-b">
+															<h6 class="text-center">Preparación</h6>
+
+															<a href class="list-group-item">
+																Lo primero que hacemos es cocer el arroz con un poco de sal
+															</a>
+															<a href class="list-group-item">
+																Mientras se cuece el arroz prepararemos la salsa de tomate, aunque si lo prefieres puedes comprarla hecha ya.
+															</a>
+															<a href class="list-group-item">
+																Para la salsa de tomate picaremos media cebolla grande y un diente de ajo, lo doramos en una sartén con aceite de oliva y agregamos una lata de tomate triturado. Recomiendo añadirle algunas especias como tomillo o Albahaca, a parte de la sal y una pizca de azúcar para quitar la acidez del tomate
+															</a>
+															<a href class="list-group-item">
+																Una vez hecho este sofrito vamos a pasarlo por la batidora, quedará una salsa riquísima.
+															</a>
+															<a href class="list-group-item">
+																Añadimos la salsa a nuestro arroz cocido y freímos unos huevos, que colocaremos encima del arroz
+															</a>
+														</div>
+
+
+													</div>
+												</div>
+											</div>
+
+											<!-- Foto comida -->
+											<div class="col-sm-4" ng-show="verComidaLunes1==='true'">
+												<div class="box">
+													<div class="box-body">
+														<p class="m-a-0"><img style="width:100%" src="../img/arrozcubana.jpg"></p>
+													</div>
+												</div>
+											</div>
+
+											<!-- Cena -->
+											<div class="col-sm-8">
+												<div class="box">
+													<div class="box-header {{app.setting.theme.accent}}">
+														<h3>Filete de ternera</h3>
+														<small>Cena</small>
+													</div>
+													<div class="box-body">
+
+														<!-- Ingredientes de la cena -->
+														<h6 class="text-center">Ingredientes</h6>
+														<div class="list-group m-b">
+															<a href class="list-group-item b-l-success">
+																<span class="pull-right label success">2 ud.</span>
+																Filetes de ternera
+															</a>
+															<a href class="list-group-item b-l-success">
+																<span class="pull-right label success">1 ud.</span>
+																Pastilla de Avecrem Dúo Guisos de Carne
+															</a>
+															<a href class="list-group-item b-l-danger">
+																<span class="pull-right label danger">1 cda.</span>
+																Harina
+															</a>
+															<a href class="list-group-item b-l-success">
+																<span class="pull-right label success">1 ud.</span>
+																Cebolla
+															</a>
+															<a href class="list-group-item b-l-danger">
+																<span class="pull-right label danger">1 chorro</span>
+																Aceite de oliva
+															</a>
+														</div>
+
+														<!-- Preparación de la cena -->
+														<div class="list-group list-group-gap m-b">
+															<h6 class="text-center">Preparación</h6>
+
+															<a href class="list-group-item">
+																Sazona los filetes con sal y pimienta y enharínalos. Sofríelos en una sartén con un chorro de aceite de oliva. Cuando estén dorados, resérvalos.
+															</a>
+															<a href class="list-group-item">
+																En el mismo aceite de la sartén, añade la cebolla, los ajos y el perejil, todo picado. Cuando la cebolla esté transparente, incorpora la cucharada de harina y remueve para que quede homogéneo. Agrega el vino y sigue removiendo hasta que comience a hervir.
+															</a>
+															<a href class="list-group-item">
+																Añade la salsa sobre los filetes junto con la pastilla de Avecrem Dúo Guisos de Carne desmenuzada, y remueve bien.
+															</a>
+															<a href class="list-group-item">
+																Deja cocer el conjunto durante 25 minutos a fuego medio, removiendo de vez en cuando. Mientras, fríe las patatas en abundante aceite de oliva y sírvelas de guarnición al plato.
+															</a>
+														</div>
+
+
+
+													</div>
+												</div>
+											</div>
+
+											<!-- Foto cena -->
+											<div class="col-sm-4">
+												<div class="box">
+													<div class="box-body">
+														<p class="m-a-0"><img style="width:100%" src="../img/filetepatatas.jpg"></p>
+													</div>
+												</div>
+											</div>
+
+
+
+			            </div>
+			          </div>
+			        </div>
 						</div>
+			        <div class="panel box no-border m-b-xs">
+			          <div class="box-header p-y-sm">
+			            <span class="pull-right label text-sm">430</span>
+			            <a data-toggle="collapse" data-parent="#accordion" data-target="#c_2">
+			              Martes
+			            </a>
+			          </div>
+			          <div id="c_2" class="collapse">
+			            <div class="box-body">
+			              <p class="text-sm text-muted"><span class="text-md pull-left w-32 m-r rounded info">A</span> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+			              </p>
+			            </div>
+			          </div>
+			        </div>
+			        <div class="panel box no-border m-b-xs">
+			          <div class="box-header p-y-sm">
+			            <span class="pull-right label text-sm">230</span>
+			            <a data-toggle="collapse" data-parent="#accordion" data-target="#c_3">
+			              Miercoles
+			            </a>
+			          </div>
+			          <div id="c_3" class="collapse">
+			            <div class="box-body">
+			              <span class="text-md pull-left w-32 m-r rounded warning">A</span>
+			              <p class="text-sm text-muted clear">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+			              </p>
+			            </div>
+			          </div>
+			        </div>
+			        <div class="panel box no-border m-b-xs">
+			          <div class="box-header p-y-sm">
+			            <span class="pull-right label text-sm">49</span>
+			            <a data-toggle="collapse" data-parent="#accordion" data-target="#c_4">
+			              Jueves
+			            </a>
+			          </div>
+			          <div id="c_4" class="collapse">
+			            <div class="box-body">
+			              <span class="text-md pull-left w-32 m-r rounded primary">A</span>
+			              <p class="text-sm text-muted clear">Vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. nesciunt you probably haven't heard of them accusamus labore sustainable
+			              </p>
+			            </div>
+			          </div>
+			        </div>
+			        <div class="panel box no-border m-b-xs">
+			          <div class="box-header p-y-sm">
+			            <span class="pull-right label text-sm">6</span>
+			            <a data-toggle="collapse" data-parent="#accordion" data-target="#c_5">
+			              Viernes
+			            </a>
+			          </div>
+			          <div id="c_5" class="collapse">
+			            <div class="box-body">
+			              <span class="text-md pull-left w-32 m-r rounded dark">A</span>
+			              <p class="text-sm text-muted clear">Vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. nesciunt you probably haven't heard of them accusamus labore sustainable
+			              </p>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
 
 
 
 
 </div>
 </div>
-</div>
+
 
 
 
